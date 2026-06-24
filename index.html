@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hats Joe — Gorras de béisbol premium. Sad Boy Vibes. Pin metálico HJ en oro y plata. Lujo urbano diseñado para quienes caminan su propio camino." />
+  <meta name="keywords" content="gorras béisbol premium, snapback, sad boy vibes, hats joe, gorras urbanas, gorras negras, gorras doradas, streetwear lujo" />
+  <meta property="og:title" content="Hats Joe — Sad Boy Vibes" />
+  <meta property="og:description" content="No solo elijas un estilo. Comienza a vivir la experiencia Hats Joe." />
+  <meta property="og:type" content="website" />
+  <title>Hats Joe — Sad Boy Vibes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Cursor glow (desktop) -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar" role="navigation" aria-label="Navegación principal">
+
+    <!-- Logo -->
+    <a href="#hero" class="logo" id="logo-link" aria-label="Hats Joe — inicio">
+      <div class="logo-mark" aria-hidden="true">
+        <!-- HJ Pin SVG Monogram -->
+        <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="19" cy="19" r="18" stroke="url(#gold-ring)" stroke-width="1"/>
+          <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+            font-family="Bebas Neue, Impact, sans-serif"
+            font-size="14" fill="url(#gold-fill)" letter-spacing="1">HJ</text>
+          <defs>
+            <linearGradient id="gold-ring" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+              <stop offset="0%"   stop-color="#9a7e32"/>
+              <stop offset="50%"  stop-color="#e8c96a"/>
+              <stop offset="100%" stop-color="#9a7e32"/>
+            </linearGradient>
+            <linearGradient id="gold-fill" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+              <stop offset="0%"   stop-color="#9a7e32"/>
+              <stop offset="50%"  stop-color="#e8c96a"/>
+              <stop offset="100%" stop-color="#c8a84b"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <span class="logo-text">HATS<span>JOE</span></span>
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="nav-links" aria-label="Menú principal">
+      <li><a href="#catalogo"   id="nav-link-catalogo">Colección</a></li>
+      <li><a href="#experiencia" id="nav-link-exp">Experiencia</a></li>
+      <li><a href="#pedido"     id="nav-link-pedido">Pedido</a></li>
+    </ul>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button class="nav-cart-btn" id="cart-btn-nav" aria-label="Ver carrito">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="cart-badge" id="cart-badge">0</span>
+      </button>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Menú móvil">
+    <a href="#catalogo"    class="mob-link">Colección</a>
+    <a href="#experiencia" class="mob-link">Experiencia</a>
+    <a href="#pedido"      class="mob-link">Pedido</a>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" aria-label="Sección principal Hats Joe">
+    <div class="hero-bg" aria-hidden="true">
+      <img
+        src="C:/Users/Comercio en forma/.gemini/antigravity/brain/3fdcea85-987b-44ce-b0b7-4ae925352c91/hero_cap_hj_1782252483400.png"
+        alt="Gorra de béisbol Hats Joe con pin metálico HJ en oro y plata"
+        loading="eager"
+      />
+      <div class="hero-gradient"></div>
+      <div class="hero-grain"></div>
+      <div class="hero-scanline"></div>
+    </div>
+
+    <!-- Particles -->
+    <div id="particles" aria-hidden="true"></div>
+
+    <!-- Content -->
+    <div class="hero-content">
+      <p class="hero-eyebrow">✦ Colección Exclusiva 2025 ✦</p>
+
+      <h1 class="hero-h1">
+        <span class="l1">Hats Joe:</span>
+        <span class="l2">Sad Boy Vibes.</span>
+      </h1>
+
+      <p class="hero-tagline">"No seguimos tendencias. Vestimos tu estado de ánimo."</p>
+
+      <p class="hero-invite">
+        No solo elijas un estilo.<br/>
+        <strong>Comienza a vivir la experiencia Hats Joe.</strong>
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#catalogo" class="btn btn-gold" id="hero-cta-main">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          Ver Colección
+        </a>
+        <a href="#pedido" class="btn btn-ghost" id="hero-cta-order">
+          Hacer Pedido
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-rod"></div>
+      <span class="scroll-label">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track" id="marquee">
+      <span class="m-item"><span>SAD BOY VIBES</span><span class="m-dot"></span></span>
+      <span class="m-item"><span>GORRAS PREMIUM</span><span class="m-dot"></span></span>
+      <span class="m-item"><span>HATS JOE</span><span class="m-dot"></span></span>
+      <span class="m-item"><span>PIN METÁLICO HJ</span><span class="m-dot"></span></span>
+      <span class="m-item"><span>URBAN LUXURY</span><span class="m-dot"></span></span>
+      <span class="m-item"><span>MELANCOLÍA URBANA</span><span class="m-dot"></span></span>
+      <span class="m-item"><span>ORO Y PLATA</span><span class="m-dot"></span></span>
+      <span class="m-item"><span>SNAPBACK ESTRUCTURADA</span><span class="m-dot"></span></span>
+      <!-- Duplicate for seamless loop -->
+      <span class="m-item"><span>SAD BOY VIBES</span><span class="m-dot"></span></span>
+      <span class="m-item"><span>GORRAS PREMIUM</span><span class="m-dot"></span></span>
+      <span class="m-item"><span>HATS JOE</span><span class="m-dot"></span></span>
+      <span class="m-item"><span>PIN METÁLICO HJ</span><span class="m-dot"></span></span>
+      <span class="m-item"><span>URBAN LUXURY</span><span class="m-dot"></span></span>
+      <span class="m-item"><span>MELANCOLÍA URBANA</span><span class="m-dot"></span></span>
+      <span class="m-item"><span>ORO Y PLATA</span><span class="m-dot"></span></span>
+      <span class="m-item"><span>SNAPBACK ESTRUCTURADA</span><span class="m-dot"></span></span>
+    </div>
+  </div>
+
+  <!-- ===================== CATÁLOGO ===================== -->
+  <section id="catalogo" aria-label="Catálogo de gorras Hats Joe">
+    <div class="section-head">
+      <span class="label reveal">Colección</span>
+      <h2 class="section-title reveal d1">
+        Gorras de Béisbol<br/>
+        <span class="txt-gold">con Pin Metálico HJ.</span>
+      </h2>
+      <p class="section-sub reveal d2">
+        Cada pieza lleva nuestro monograma HJ fundido en metal de lujo —
+        oro o plata — aplicado como pin tridimensional en el panel frontal.
+      </p>
+    </div>
+
+    <!-- Filter pills -->
+    <div class="filters reveal">
+      <button class="f-pill active" data-filter="all"    id="fil-all">Todo</button>
+      <button class="f-pill"        data-filter="gold"   id="fil-gold">Serie Oro</button>
+      <button class="f-pill"        data-filter="silver" id="fil-silver">Serie Plata</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="products-grid">
+
+      <!-- Card 1: The Golden Tear Snapback -->
+      <article class="p-card reveal" data-category="gold" id="card-golden-tear">
+        <span class="p-badge">Estrella</span>
+        <div class="p-img-wrap">
+          <img
+            src="C:/Users/Comercio en forma/.gemini/antigravity/brain/3fdcea85-987b-44ce-b0b7-4ae925352c91/cap_golden_tear_1782252490907.png"
+            alt="The Golden Tear Snapback — gorra negra estructurada con pin HJ en oro"
+            loading="lazy"
+          />
+          <div class="p-overlay">
+            <button class="p-quick" id="quick-golden" onclick="addToCart('The Golden Tear Snapback', 'gold', 890)">
+              + Añadir al Carrito
+            </button>
+          </div>
+        </div>
+        <div class="p-info">
+          <span class="p-series">Serie Oro</span>
+          <h3 class="p-name">The Golden Tear Snapback</h3>
+          <p class="p-desc">
+            La pieza central de nuestra colección. Confeccionada en negro mate profundo
+            que absorbe la luz, destacando nuestro pin bordado en hilo de oro de alta densidad.
+            Visera plana. Ajuste perfecto, presencia innegable.
+          </p>
+          <div class="p-foot">
+            <span class="p-price g">$890</span>
+            <button class="add-btn" id="add-golden" onclick="addToCart('The Golden Tear Snapback', 'gold', 890)" aria-label="Añadir al carrito">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Añadir
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Silver Shadow Cap -->
+      <article class="p-card silver reveal d1" data-category="silver" id="card-silver-shadow">
+        <span class="p-badge silver">Nuevo</span>
+        <div class="p-img-wrap">
+          <img
+            src="C:/Users/Comercio en forma/.gemini/antigravity/brain/3fdcea85-987b-44ce-b0b7-4ae925352c91/cap_silver_shadow_1782252500929.png"
+            alt="Silver Shadow Cap — gorra carbón estructurada con pin HJ en plata"
+            loading="lazy"
+          />
+          <div class="p-overlay">
+            <button class="p-quick silver-q" id="quick-silver" onclick="addToCart('Silver Shadow Cap', 'silver', 820)">
+              + Añadir al Carrito
+            </button>
+          </div>
+        </div>
+        <div class="p-info">
+          <span class="p-series s">Serie Plata</span>
+          <h3 class="p-name">Silver Shadow Cap</h3>
+          <p class="p-desc">
+            Fría como el acero. Esta gorra presenta pin y herrajes en plata metálica
+            sobre un lienzo oscuro estructurado. Visera curva. Look tumbadón impecable y sofisticado.
+            Materiales transpirables que soportan tu ritmo.
+          </p>
+          <div class="p-foot">
+            <span class="p-price s">$820</span>
+            <button class="add-btn s" id="add-silver" onclick="addToCart('Silver Shadow Cap', 'silver', 820)" aria-label="Añadir al carrito">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Añadir
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: Midnight Noir (CSS Placeholder) -->
+      <article class="p-card reveal d2" data-category="gold" id="card-midnight">
+        <span class="p-badge soon">Próximamente</span>
+        <div class="p-img-wrap">
+          <div class="p-placeholder">
+            <svg class="cap-svg-wrap" width="200" height="160" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Baseball cap silhouette -->
+              <ellipse cx="100" cy="110" rx="90" ry="18" fill="rgba(20,20,25,0.7)"/>
+              <!-- Bill/brim -->
+              <path d="M40 100 Q100 115 170 100 L175 108 Q100 125 35 108 Z" fill="#1c1c24" stroke="rgba(200,168,75,0.3)" stroke-width="1"/>
+              <!-- Cap body -->
+              <path d="M45 100 Q45 50 100 40 Q155 50 155 100" fill="#141419" stroke="rgba(200,168,75,0.25)" stroke-width="1"/>
+              <!-- Crown seam panels -->
+              <path d="M100 40 L100 100" stroke="rgba(200,168,75,0.15)" stroke-width="0.8"/>
+              <path d="M72 43 Q80 72 80 100" stroke="rgba(200,168,75,0.12)" stroke-width="0.8"/>
+              <path d="M128 43 Q120 72 120 100" stroke="rgba(200,168,75,0.12)" stroke-width="0.8"/>
+              <!-- HJ Pin -->
+              <circle cx="100" cy="72" r="14" fill="url(#capGold)" stroke="rgba(232,201,106,0.6)" stroke-width="1"/>
+              <text x="100" y="77" text-anchor="middle" font-family="Bebas Neue, Impact" font-size="11" fill="#0a0a0e" letter-spacing="1">HJ</text>
+              <!-- Adjustable back strap -->
+              <rect x="82" y="99" width="36" height="5" rx="2" fill="#1c1c24" stroke="rgba(200,168,75,0.2)" stroke-width="1"/>
+              <defs>
+                <linearGradient id="capGold" x1="86" y1="58" x2="114" y2="86">
+                  <stop offset="0%" stop-color="#9a7e32"/>
+                  <stop offset="50%" stop-color="#e8c96a"/>
+                  <stop offset="100%" stop-color="#c8a84b"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="p-overlay">
+            <button class="p-quick" id="quick-midnight" onclick="notifyMe('Midnight Noir')">
+              🔔 Avísame
+            </button>
+          </div>
+        </div>
+        <div class="p-info">
+          <span class="p-series">Serie Oro</span>
+          <h3 class="p-name">Midnight Noir</h3>
+          <p class="p-desc">
+            All-black total. Pin dual HJ oro/plata sobre tejido estructurado de alta densidad.
+            Para los que no necesitan color para destacar. Visera plana. En desarrollo.
+          </p>
+          <div class="p-foot">
+            <span class="p-price g">Pronto</span>
+            <button class="add-btn" id="add-midnight" onclick="notifyMe('Midnight Noir')" aria-label="Notificarme cuando esté disponible">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              Avísame
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCIA ===================== -->
+  <section id="experiencia" aria-label="La experiencia Hats Joe">
+    <div class="exp-inner">
+
+      <!-- Text -->
+      <div class="exp-text">
+        <span class="label reveal">Manifiesto</span>
+        <h2 class="exp-h2 reveal d1">
+          Lujo que nace<br/>
+          <em class="txt-gold">del asfalto.</em>
+        </h2>
+
+        <blockquote class="exp-quote reveal d2">
+          "En Hats Joe entendemos que el estilo nace en las noches largas y los pensamientos
+          profundos. Somos la mezcla perfecta entre la melancolía urbana y el lujo callejero."
+        </blockquote>
+
+        <p class="exp-sub reveal d3">
+          Cada una de nuestras gorras de béisbol está diseñada con materiales premium y el
+          pin metálico HJ — nuestro monograma fundido en oro o plata — para aquellos que
+          caminan con la mirada baja, pero siempre destacando del resto.
+          No seguimos tendencias; <strong>vestimos tu estado de ánimo.</strong>
+        </p>
+
+        <div class="exp-pills reveal d4">
+          <span class="exp-pill">Pin Metálico 3D</span>
+          <span class="exp-pill">Ajuste Estructurado</span>
+          <span class="exp-pill">Materiales Premium</span>
+          <span class="exp-pill">Sad Boy Vibes</span>
+        </div>
+
+        <div class="reveal d4">
+          <a href="#pedido" class="btn btn-gold" id="exp-cta">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Pedir por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="exp-img-side reveal d2">
+        <div class="exp-img-frame">
+          <img
+            src="C:/Users/Comercio en forma/.gemini/antigravity/brain/3fdcea85-987b-44ce-b0b7-4ae925352c91/cap_golden_tear_1782252490907.png"
+            alt="Detalle del pin metálico HJ en la gorra Hats Joe"
+            loading="lazy"
+          />
+        </div>
+        <div class="exp-stats-float">
+          <div class="exp-stat">
+            <span class="exp-stat-n">100%</span>
+            <span class="exp-stat-l">Premium</span>
+          </div>
+          <div class="exp-stat">
+            <span class="exp-stat-n">Au</span>
+            <span class="exp-stat-l">Oro Puro</span>
+          </div>
+          <div class="exp-stat">
+            <span class="exp-stat-n">∞</span>
+            <span class="exp-stat-l">Estilo</span>
+          </div>
+          <div class="exp-stat">
+            <span class="exp-stat-n">3D</span>
+            <span class="exp-stat-l">Pin Metálico</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== PEDIDO / CONTACTO ===================== -->
+  <section id="pedido" aria-label="Formulario de pedido">
+    <div class="pedido-inner">
+
+      <div class="pedido-intro">
+        <span class="label reveal">Pedido</span>
+        <h2 class="section-title reveal d1">
+          Comienza tu<br/>
+          <span class="txt-gold">Experiencia.</span>
+        </h2>
+        <p class="reveal d2">
+          Llena el formulario y te contactamos vía WhatsApp para confirmar tu pedido,
+          talla, envío y método de pago. Respuesta en menos de 2 horas.
+        </p>
+      </div>
+
+      <form class="order-form reveal" id="order-form" novalidate aria-label="Formulario de pedido Hats Joe">
+
+        <div class="field">
+          <label for="f-nombre">Nombre completo</label>
+          <input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name" />
+        </div>
+
+        <div class="field">
+          <label for="f-whatsapp">WhatsApp / Teléfono</label>
+          <input type="tel" id="f-whatsapp" name="whatsapp" placeholder="+52 000 000 0000" required autocomplete="tel" />
+        </div>
+
+        <div class="field">
+          <label for="f-ciudad">Ciudad / Estado</label>
+          <input type="text" id="f-ciudad" name="ciudad" placeholder="Ej: Monterrey, N.L." required />
+        </div>
+
+        <div class="field">
+          <label for="f-talla">Talla de gorra</label>
+          <select id="f-talla" name="talla" required>
+            <option value="" disabled selected>Selecciona talla</option>
+            <option value="S/M">S/M — Ajustable pequeño</option>
+            <option value="M/L">M/L — Ajustable estándar</option>
+            <option value="L/XL">L/XL — Ajustable grande</option>
+            <option value="Unica">Talla Única — Snapback</option>
+          </select>
+        </div>
+
+        <div class="field field-full">
+          <label for="f-modelo">Modelo de interés</label>
+          <select id="f-modelo" name="modelo" required>
+            <option value="" disabled selected>Selecciona un modelo</option>
+            <option value="The Golden Tear Snapback">The Golden Tear Snapback — $890 (Serie Oro)</option>
+            <option value="Silver Shadow Cap">Silver Shadow Cap — $820 (Serie Plata)</option>
+            <option value="Midnight Noir">Midnight Noir — Próximamente</option>
+            <option value="Otro / Consulta">Otro / Tengo una consulta</option>
+          </select>
+        </div>
+
+        <div class="field field-full">
+          <label for="f-notas">Notas adicionales (opcional)</label>
+          <textarea id="f-notas" name="notas" rows="3" placeholder="Color, combinación, mensaje personalizado, urgencia de envío…"></textarea>
+        </div>
+
+        <div class="form-footer field-full">
+          <div class="form-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9baab8" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Tus datos son privados y se usan únicamente para gestionar tu pedido.
+          </div>
+          <button type="submit" class="btn btn-gold" id="submit-btn" aria-label="Enviar pedido">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Enviar y Contactar por WhatsApp
+          </button>
+          <p class="form-note">
+            Al enviar, abriremos WhatsApp automáticamente con tu pedido pre-escrito.
+          </p>
+          <!-- Admin: Export to CSV -->
+          <button type="button" class="btn btn-ghost" id="export-csv-btn"
+            onclick="exportCSV()"
+            aria-label="Exportar pedidos a CSV"
+            title="Exportar todos los pedidos guardados a CSV/Excel"
+            style="font-size:0.62rem; padding: 0.6rem 1.4rem; opacity: 0.5;"
+          >
+            ⬇ Exportar Pedidos CSV
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-grid">
+
+      <div>
+        <p class="f-brand-name">HATS<span>JOE</span></p>
+        <p class="f-tagline">
+          Gorras de béisbol premium con pin<br/>
+          metálico HJ. Melancolía urbana<br/>
+          hecha lujo callejero.
+        </p>
+        <div class="socials">
+          <a href="#" class="soc-btn" id="soc-ig" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="soc-btn" id="soc-tt" aria-label="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.28 8.28 0 0 0 4.84 1.56V6.79a4.85 4.85 0 0 1-1.07-.1z"/></svg>
+          </a>
+          <a href="#" class="soc-btn" id="soc-wa" aria-label="WhatsApp" onclick="openWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <p class="f-col-title">Colección</p>
+        <ul class="f-links">
+          <li><a href="#catalogo" id="f-link-cat">Ver Todo</a></li>
+          <li><a href="#catalogo" id="f-link-gold">Serie Oro</a></li>
+          <li><a href="#catalogo" id="f-link-silver">Serie Plata</a></li>
+          <li><a href="#" id="f-link-new">Nuevos Lanzamientos</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="f-col-title">Marca</p>
+        <ul class="f-links">
+          <li><a href="#experiencia" id="f-link-exp">Manifiesto</a></li>
+          <li><a href="#" id="f-link-mat">Materiales</a></li>
+          <li><a href="#" id="f-link-pin">El Pin HJ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="f-col-title">Soporte</p>
+        <ul class="f-links">
+          <li><a href="#pedido" id="f-link-ped">Hacer Pedido</a></li>
+          <li><a href="#" id="f-link-env">Envíos</a></li>
+          <li><a href="#" id="f-link-dev">Devoluciones</a></li>
+          <li><a href="#" id="f-link-tallas">Guía de Tallas</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="f-copy">© 2025 <em>Hats Joe</em>. Todos los derechos reservados. Hecho con melancolía.</p>
+      <div class="f-legal">
+        <a href="#" id="f-priv">Privacidad</a>
+        <a href="#" id="f-terms">Términos</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== WHATSAPP FAB ===================== -->
+  <div class="wa-fab" id="wa-fab" role="button" tabindex="0"
+    aria-label="Abrir WhatsApp para consultar sobre Hats Joe"
+    onclick="openWhatsApp()"
+    onkeydown="if(event.key==='Enter'||event.key===' ')openWhatsApp()"
+  >
+    <div class="wa-ring">
+      <div class="wa-inner">
+        <!-- WhatsApp icon -->
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+      </div>
+      <div class="wa-ping" aria-hidden="true"></div>
+    </div>
+    <div class="wa-tooltip" aria-hidden="true">Chatear en WhatsApp</div>
+  </div>
+
+  <!-- ===================== TOAST ===================== -->
+  <div class="toast" id="toast" role="alert" aria-live="polite" aria-atomic="true">
+    <span class="t-icon" id="t-icon">✦</span>
+    <div>
+      <strong class="t-strong" id="t-title">Añadido</strong>
+      <span class="t-body" id="t-body">The Golden Tear Snapback</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
