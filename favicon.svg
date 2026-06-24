@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <!-- Solid Metallic Gold Gradient for High Readability at Small Sizes -->
+    <linearGradient id="gold-solid-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c8a84b" />
+      <stop offset="50%" stop-color="#e8c96a" />
+      <stop offset="100%" stop-color="#9a7e32" />
+    </linearGradient>
+  </defs>
+
+  <!-- Circular Matte Black Background with Gold Border -->
+  <circle cx="100" cy="100" r="94" fill="#060608" stroke="url(#gold-solid-gradient)" stroke-width="6" />
+
+  <!-- Monogram Group (HJ Interlocking) -->
+  <g>
+    <!-- 1. H Pillars -->
+    <!-- Left Pillar of H -->
+    <path d="M 50 40 H 86 V 48 H 78 V 152 H 86 V 160 H 50 V 152 H 58 V 48 H 50 Z" fill="url(#gold-solid-gradient)" />
+    <!-- Right Pillar of H -->
+    <path d="M 114 40 H 150 V 48 H 142 V 152 H 150 V 160 H 114 V 152 H 122 V 48 H 114 Z" fill="url(#gold-solid-gradient)" />
+    
+    <!-- 2. J Monogram (Interlocks behind crossbar, in front of left pillar) -->
+    <path d="M 82 48 H 118 V 56 H 108 V 126 C 108 148, 64 148, 64 126 H 76 C 76 135, 96 135, 96 126 V 56 H 82 Z" fill="url(#gold-solid-gradient)" />
+    
+    <!-- 3. H Crossbar -->
+    <path d="M 78 94 H 122 V 106 H 78 Z" fill="url(#gold-solid-gradient)" />
+  </g>
+</svg>

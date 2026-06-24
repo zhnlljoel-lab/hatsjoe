@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <!-- Metallic Gold to Silver Gradient -->
+    <linearGradient id="gold-silver-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a6f27" />
+      <stop offset="20%" stop-color="#e8c96a" />
+      <stop offset="40%" stop-color="#c8a84b" />
+      <stop offset="60%" stop-color="#e1e7ec" />
+      <stop offset="80%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#6b7a89" />
+    </linearGradient>
+
+    <!-- 3D Specular Relief and Shadow Filter -->
+    <filter id="luxury-3d" x="-20%" y="-20%" width="140%" height="140%">
+      <!-- Blur for bevel surface creation -->
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur" />
+      
+      <!-- Specular lighting to create the 3D shiny metallic reflection -->
+      <feSpecularLighting in="blur" surfaceScale="6" specularConstant="1.5" specularExponent="22" lighting-color="#ffffff" result="specularOut">
+        <fePointLight x="-80" y="-120" z="180" />
+      </feSpecularLighting>
+      
+      <!-- Mask specular output to only cover the letters -->
+      <feComposite in="specularOut" in2="SourceAlpha" operator="in" result="specularImage" />
+      
+      <!-- Blend the source graphic with the specular highlights -->
+      <feComposite in="SourceGraphic" in2="specularImage" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint" />
+      
+      <!-- Add a rich, soft drop shadow -->
+      <feDropShadow dx="3" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <!-- Deep Black Matte Background -->
+  <rect width="100%" height="100%" fill="#060608" rx="8" />
+
+  <!-- Monogram Group with 3D Effect -->
+  <g filter="url(#luxury-3d)">
+    <!-- 1. H Pillars (Background of J) -->
+    <!-- Left Pillar of H -->
+    <path d="M 50 40 H 86 V 48 H 78 V 152 H 86 V 160 H 50 V 152 H 58 V 48 H 50 Z" fill="url(#gold-silver-gradient)" />
+    <!-- Right Pillar of H -->
+    <path d="M 114 40 H 150 V 48 H 142 V 152 H 150 V 160 H 114 V 152 H 122 V 48 H 114 Z" fill="url(#gold-silver-gradient)" />
+    
+    <!-- 2. J Monogram (Interlocks by passing behind crossbar, but in front of left pillar) -->
+    <path d="M 82 48 H 118 V 56 H 108 V 126 C 108 148, 64 148, 64 126 H 76 C 76 135, 96 135, 96 126 V 56 H 82 Z" fill="url(#gold-silver-gradient)" />
+    
+    <!-- 3. H Crossbar (Drawn in front of J to complete the interlock) -->
+    <path d="M 78 94 H 122 V 106 H 78 Z" fill="url(#gold-silver-gradient)" />
+  </g>
+</svg>
