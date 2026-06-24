@@ -8,7 +8,7 @@
 /* ============================
    CONFIG — Cambia tu número aquí
    ============================ */
-const WA_NUMBER  = '521XXXXXXXXXX'; // ← Reemplaza con tu número (sin + ni espacios)
+const WA_NUMBER  = '525635927867'; // ← Número de WhatsApp de Hats Joe
 const WA_MSG_DEFAULT = 'Hola, me interesa adquirir una gorra de la colección Hats Joe. Quiero empezar a vivir la experiencia.';
 const BRAND_NAME = 'Hats Joe';
 
@@ -196,15 +196,26 @@ orderForm.addEventListener('submit', (e) => {
     ciudad:    document.getElementById('f-ciudad').value.trim(),
     talla:     document.getElementById('f-talla').value,
     modelo:    document.getElementById('f-modelo').value,
+    pago:      document.getElementById('f-pago').value,
     notas:     document.getElementById('f-notas').value.trim(),
     estado:    'Pendiente',
   };
 
   // Validate
-  if (!data.nombre || !data.whatsapp || !data.ciudad || !data.talla || !data.modelo) {
+  if (!data.nombre || !data.whatsapp || !data.ciudad || !data.talla || !data.modelo || !data.pago) {
     showToast('Campos incompletos', 'Por favor llena todos los campos requeridos.', '⚠', 'silver');
     return;
   }
+
+  // Map prices for PayPal
+  const prices = {
+    'The Golden Tear Snapback': 890,
+    'Silver Shadow Cap': 820
+  };
+  const price = prices[data.modelo] || 890;
+  
+  // Build PayPal link
+  const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=zhnlljoel@icloud.com&amount=${price}&item_name=Gorra+Hats+Joe+-+${encodeURIComponent(data.modelo)}&currency_code=MXN`;
 
   // Save to localStorage for CSV export
   savedOrders.push(data);
@@ -218,6 +229,8 @@ orderForm.addEventListener('submit', (e) => {
     `📍 Ciudad: ${data.ciudad}`,
     `📐 Talla: ${data.talla}`,
     `🏷️ Modelo: ${data.modelo}`,
+    `💳 Pago: ${data.pago === 'PayPal' ? 'PayPal (zhnlljoel@icloud.com)' : 'Acordar por WhatsApp'}`,
+    `${data.pago === 'PayPal' ? `🔗 Link de Pago: ${paypalUrl}` : ''}`,
     `${data.notas ? `📝 Notas: ${data.notas}` : ''}`,
     ``,
     `Hola, me interesa adquirir una gorra de la colección Hats Joe. Quiero empezar a vivir la experiencia.`,
@@ -226,13 +239,21 @@ orderForm.addEventListener('submit', (e) => {
   ].filter(Boolean).join('\n');
 
   // Show confirmation toast
-  showToast('¡Pedido enviado!', `Abriendo WhatsApp con tu pedido, ${data.nombre}.`, '✦', 'gold');
+  if (data.pago === 'PayPal') {
+    showToast('¡Pedido enviado!', `Abriendo WhatsApp y PayPal para pagar, ${data.nombre}.`, '✦', 'gold');
+    // Open PayPal in new tab
+    setTimeout(() => {
+      window.open(paypalUrl, '_blank', 'noopener,noreferrer');
+    }, 100);
+  } else {
+    showToast('¡Pedido enviado!', `Abriendo WhatsApp con tu pedido, ${data.nombre}.`, '✦', 'gold');
+  }
 
   // Reset form
   orderForm.reset();
 
   // Open WhatsApp after brief delay
-  setTimeout(() => openWhatsApp(waMsg), 800);
+  setTimeout(() => openWhatsApp(waMsg), 900);
 });
 
 /* ============================
@@ -246,7 +267,7 @@ function exportCSV() {
     return;
   }
 
-  const headers = ['ID', 'Fecha', 'Nombre', 'WhatsApp', 'Ciudad', 'Talla', 'Modelo', 'Notas', 'Estado'];
+  const headers = ['ID', 'Fecha', 'Nombre', 'WhatsApp', 'Ciudad', 'Talla', 'Modelo', 'Notas', 'Método Pago', 'Estado'];
   const rows = orders.map(o => [
     o.id        || '',
     o.fecha     || '',
@@ -256,6 +277,7 @@ function exportCSV() {
     o.talla     || '',
     o.modelo    || '',
     (o.notas    || '').replace(/,/g, ';'),
+    o.pago      || 'Acordar por WhatsApp',
     o.estado    || 'Pendiente',
   ]);
 
